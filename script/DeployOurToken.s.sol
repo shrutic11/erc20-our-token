@@ -11,7 +11,7 @@ contract DeployOurToken is Script {
     function run() external returns (OurToken) {
         vm.startBroadcast();
         OurToken ourToken = new OurToken(INITIAL_SUPPLY);
-        vm.startBroadcast();
+        vm.stopBroadcast();
         return ourToken;
     }
 }
